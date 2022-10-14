@@ -1,4 +1,5 @@
 import os
+import sys
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
@@ -8,6 +9,12 @@ from launch_ros.actions import Node
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     amcl_params = os.path.join(os.getcwd(), '..', 'conf', 'amcl_params.yaml')
+    
+    for arg in sys.argv:
+        if arg.startswith('use_sim_time:='):
+            if arg.split(':=')[1] == 'true':
+                amcl_params = os.path.join(os.getcwd(), '..', 'conf', 'amcl_sim_params.yaml')
+
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
