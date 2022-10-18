@@ -30,9 +30,9 @@ SPDX-License-Identifier: BSD-3-Clause
 			</group>
 			<group name="INITIAL_POS">
 				<param extern-name="init_map" name="initial_map">gam_sim_real</param>
-				<param  name="initial_x">0.0</param>
-				<param  name="initial_y">0.0</param>
-				<param  name="initial_theta">0.0</param>
+	        		<param  name="initial_x">-0.8794</param>
+	        		<param  name="initial_y">-2.2901</param>
+	        		<param  name="initial_theta">-171</param>
 			</group>
 		</device>
 
