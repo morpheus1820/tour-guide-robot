@@ -58,7 +58,9 @@ def generate_launch_description():
     # Create our own temporary YAML files that include substitutions
     param_substitutions = {
         'use_sim_time': use_sim_time,
-        'autostart': autostart}
+        'autostart': autostart,
+	'default_nav_through_poses_bt_xml': '/home/user1/tour-guide-robot/app/navigation2/conf/odometry_calibration.xml'
+	}
 
     configured_params = RewrittenYaml(
         source_file=params_file,
